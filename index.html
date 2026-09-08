@@ -15,11 +15,11 @@
 
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <style>
-      @media (min-width: 992px) {
+      /* @media (min-width: 992px) {
         .menu_icon {
           display: none;
         }
-      }
+      } */
     </style>
   </head>
   <body>
@@ -29,14 +29,14 @@
       </div>
 
       <div>
-        <i
-          tabindex="0"
-          class="peer fa-solid fa-bars md:hidden cursor-pointer"
-        ></i>
+        <div class="bg-red-500 peer lg:hidden">
+          <i
+            tabindex="0"
+            class=" fa-solid fa-bars md:hidden cursor-pointer "
+          ></i>
+        </div>
 
-        <ul
-          class="hidden peer-focus:flex flex-col gap-4 lg:flex lg:flex-row lg:gap-8"
-        >
+        <ul class="bg-green-400 absolute hidden peer-hover:block lg:relative lg:flex gap-10 right-4">
           <li><a href="#">About</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Contact</a></li>
@@ -46,7 +46,7 @@
 
     <section class="min-h-10 bg-[#f8f9fb] flex items-center overflow-hidden">
       <div
-        class="w-full max-w-6xl mx-auto px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+        class="w-full max-w-6xl mx-auto px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center"
       >
         <!--LEFT CONTENT-->
         <div class="max-w-xl">
@@ -59,7 +59,7 @@
 
           <!-- Header -->
           <h1
-            class="text-4xl sm:text-5xl lg:text-[42px] xl:text-[46px] font-bold leading-12 tracking-tight text-[#202124]"
+            class="text-4xl md:text-3xl font-bold leading-12 tracking-tight text-[#202124]"
           >
             Hi, I'm a
             <span class="text-blue-400"> Frontend Developer </span>
@@ -95,9 +95,7 @@
         <!-- RIGHT -->
         <div class="relative flex justify-center lg:justify-end">
           <!-- Image container -->
-          <div
-            class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
-          >
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
             <!-- Image -->
             <img
               src="img/profile.jpg"
