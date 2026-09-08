@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      @media (min-width: 992px) {
+        .menu_icon {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="w-full flex justify-between px-8 py-4">
+      <div>
+        <h2 class="font-bold">DevPortfolio</h2>
+      </div>
+
+      <div>
+        <i
+          tabindex="0"
+          class="peer fa-solid fa-bars md:hidden cursor-pointer"
+        ></i>
+
+        <ul
+          class="hidden peer-focus:flex flex-col gap-4 lg:flex lg:flex-row lg:gap-8"
+        >
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="min-h-10 bg-[#f8f9fb] flex items-center overflow-hidden">
+      <div
+        class="w-full max-w-6xl mx-auto px-6 lg:px-8 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+      >
+        <!--LEFT CONTENT-->
+        <div class="max-w-xl">
+          <!-- Available badge -->
+          <span
+            class="items-center border border-blue-200 rounded-full px-3 py-1 mb-5 text-sm sm:text-xs font-semibold tracking-wider text-blue-500"
+          >
+            AVAILABLE FOR PROJECTS
+          </span>
+
+          <!-- Header -->
+          <h1
+            class="text-4xl sm:text-5xl lg:text-[42px] xl:text-[46px] font-bold leading-12 tracking-tight text-[#202124]"
+          >
+            Hi, I'm a
+            <span class="text-blue-400"> Frontend Developer </span>
+            dedicated to crafting exceptional digital experiences.
+          </h1>
+
+          <p
+            class="mt-6 text-base sm:text-lg leading-relaxed text-gray-500 max-w-lg"
+          >
+            I build accessible, responsive, and performance-driven web
+            applications using modern technologies and a user-centric design
+            approach.
+          </p>
+
+          <!-- Buttons -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a
+              href="#"
+              class="items-center justify-center gap-5 bg-blue-400 hover:bg-blue-500 text-white font-medium text-sm px-6 py-3 rounded-lg"
+            >
+              View My Work
+            </a>
+
+            <a
+              href="#"
+              class="items-center justify-center bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-sm px-7 py-3 rounded-lg"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="relative flex justify-center lg:justify-end">
+          <!-- Image container -->
+          <div
+            class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96"
+          >
+            <!-- Image -->
+            <img
+              src="img/profile.jpg"
+              alt="Frontend Developer"
+              class="relative w-full h-full object-cover p-1"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<div>
+  <!-- ရှေ့က Element မှာ 'peer' ထည့်ပါ -->
+  <!-- <input
+        type="email"
+        id="email"
+        class="peer border p-2 rounded focus:border-blue-500 placeholder-transparent"
+        placeholder="Email"
+      /> -->
+
+  <!-- နောက်က Element မှာ 'peer-focus:' သို့မဟုတ် 'peer-placeholder-shown:' သုံးပါ -->
+  <!-- <label
+        for="email"
+        class="text-gray-500 peer-focus:text-blue-500 peer-focus:-translate-y-6 transition-all"
+      >
+        Email Address
+      </label> -->
+</div>
