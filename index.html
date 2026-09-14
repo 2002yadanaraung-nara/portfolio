@@ -23,28 +23,49 @@
     </style>
   </head>
   <body>
-    <nav class="w-full flex justify-between px-8 py-4">
+    <nav
+      class="fixed top-0 left-0 w-full z-50 flex justify-between px-8 py-4 bg-white"
+    >
+      <!-- Logo -->
       <div>
         <h2 class="font-bold">DevPortfolio</h2>
       </div>
 
-      <div>
-        <div class="bg-red-500 peer lg:hidden">
-          <i
-            tabindex="0"
-            class=" fa-solid fa-bars md:hidden cursor-pointer "
-          ></i>
-        </div>
+      <!-- Navigation -->
+      <div class="relative">
+        <!-- Hamburger -->
+        <button id="menuBtn" class="lg:hidden cursor-pointer">
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
-        <ul class="bg-green-400 absolute hidden peer-hover:block lg:relative lg:flex gap-10 right-4">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul
+          id="menu"
+          class="hidden absolute right-0 top-8 w-32 bg-white border border-gray-200 rounded-md shadow-md p-3 space-y-3 lg:static lg:flex lg:w-auto lg:bg-transparent lg:border-0 lg:shadow-none lg:p-0 lg:space-y-0 lg:gap-10"
+        >
+          <li>
+            <a href="#about" class="block">About</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="block">Projects</a>
+          </li>
+
+          <li>
+            <a href="#skills" class="block">Skills</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="block">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
 
-    <section class="min-h-10 bg-[#f8f9fb] flex items-center overflow-hidden">
+    <!-- About -->
+    <section
+      id="about"
+      class="min-h-10 bg-[#f8f9fb] flex items-center overflow-hidden"
+    >
       <div
         class="w-full max-w-6xl mx-auto px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center"
       >
@@ -52,9 +73,9 @@
         <div class="max-w-xl">
           <!-- Available badge -->
           <span
-            class="items-center border border-blue-200 rounded-full px-3 py-1 mb-5 text-sm sm:text-xs font-semibold tracking-wider text-blue-500"
+            class="inline-flex items-center border border-indigo-200 rounded-full px-3 py-1 mb-5 text-xs font-semibold tracking-wider text-indigo-700"
           >
-            AVAILABLE FOR PROJECTS
+            ABOUT ME
           </span>
 
           <!-- Header -->
@@ -62,32 +83,35 @@
             class="text-4xl md:text-3xl font-bold leading-12 tracking-tight text-[#202124]"
           >
             Hi, I'm a
-            <span class="text-blue-400"> Frontend Developer </span>
+            <span class="text-indigo-700"> Frontend Developer </span>
             dedicated to crafting exceptional digital experiences.
           </h1>
 
           <p
             class="mt-6 text-base sm:text-lg leading-relaxed text-gray-500 max-w-lg"
           >
-            I build accessible, responsive, and performance-driven web
-            applications using modern technologies and a user-centric design
-            approach.
+            I’m an ICT student with an interest in frontend development and
+            UI/UX design. I enjoy turning ideas and designs into responsive,
+            functional, and user-friendly web experiences using modern web
+            technologies.
           </p>
 
           <!-- Buttons -->
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
             <a
-              href="#"
-              class="items-center justify-center gap-5 bg-blue-400 hover:bg-blue-500 text-white font-medium text-sm px-6 py-3 rounded-lg"
+              href="#projects"
+              class="inline-flex items-center justify-center gap-2 bg-indigo-700 hover:bg-indigo-800 text-white font-medium text-sm px-6 py-3 rounded-lg"
             >
               View My Work
+              <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
 
             <a
-              href="#"
-              class="items-center justify-center bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-sm px-7 py-3 rounded-lg"
+              href="mailto:2002yadanaraung@gmail.com"
+              class="inline-flex items-center justify-center gap-2 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-gray-700 font-medium text-sm px-6 py-3 rounded-lg"
             >
-              Contact Me
+              <i class="fa-solid fa-envelope text-xs"></i>
+              Email Me
             </a>
           </div>
         </div>
@@ -106,6 +130,730 @@
         </div>
       </div>
     </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="bg-[#f7f7ff] px-6 py-8 sm:px-8 lg:px-14">
+      <div class="max-w-6xl mx-auto">
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <p
+            class="text-[10px] sm:text-xs font-semibold tracking-[0.2em] text-indigo-600 uppercase"
+          >
+            My Skills
+          </p>
+
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mt-2">
+            Skills & Technologies
+          </h2>
+
+          <p
+            class="text-xs sm:text-sm text-gray-500 mt-3 max-w-lg mx-auto leading-relaxed"
+          >
+            The technologies and tools I use to create clean, responsive, and
+            user-friendly web experiences.
+          </p>
+        </div>
+
+        <!-- Skills Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- FRONTEND DEVELOPMENT -->
+          <div
+            class="bg-white border border-gray-200 rounded-xl p-6 sm:p-7 hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Title -->
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-11 h-11 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-600"
+              >
+                <i class="fa-solid fa-code text-lg"></i>
+              </div>
+
+              <div>
+                <p
+                  class="text-[9px] font-mono tracking-widest text-indigo-500 uppercase"
+                >
+                  Development
+                </p>
+
+                <h3 class="text-lg font-semibold text-slate-800">
+                  Frontend Development
+                </h3>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="grid grid-cols-2 gap-3">
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-brands fa-html5 text-orange-500"></i>
+
+                <span class="text-xs font-medium text-gray-600"> HTML </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-brands fa-css3-alt text-blue-500"></i>
+
+                <span class="text-xs font-medium text-gray-600"> CSS </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-brands fa-js text-yellow-500"></i>
+
+                <span class="text-xs font-medium text-gray-600">
+                  JavaScript
+                </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-solid fa-wind text-cyan-500"></i>
+
+                <span class="text-xs font-medium text-gray-600">
+                  Tailwind CSS
+                </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-solid fa-mobile-screen text-indigo-500"></i>
+
+                <span class="text-xs font-medium text-gray-600">
+                  Responsive Design
+                </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-solid fa-layer-group text-purple-500"></i>
+
+                <span class="text-xs font-medium text-gray-600">
+                  UI Development
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOOLS & TECHNOLOGIES -->
+          <div
+            class="bg-white border border-gray-200 rounded-xl p-6 sm:p-7 hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Title -->
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-11 h-11 flex items-center justify-center rounded-lg bg-purple-50 text-purple-600"
+              >
+                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+              </div>
+
+              <div>
+                <p
+                  class="text-[9px] font-mono tracking-widest text-purple-500 uppercase"
+                >
+                  Tools
+                </p>
+
+                <h3 class="text-lg font-semibold text-slate-800">
+                  Tools & Technologies
+                </h3>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="grid grid-cols-2 gap-3">
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-brands fa-github text-gray-700"></i>
+
+                <span class="text-xs font-medium text-gray-600"> GitHub </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-brands fa-git-alt text-orange-600"></i>
+
+                <span class="text-xs font-medium text-gray-600"> Git </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-solid fa-code text-blue-500"></i>
+
+                <span class="text-xs font-medium text-gray-600"> VS Code </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-brands fa-figma text-purple-500"></i>
+
+                <span class="text-xs font-medium text-gray-600"> Figma </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-solid fa-palette text-pink-500"></i>
+
+                <span class="text-xs font-medium text-gray-600"> UI / UX </span>
+              </div>
+
+              <div
+                class="flex items-center gap-3 border border-gray-100 bg-gray-50 rounded-lg px-4 py-3"
+              >
+                <i class="fa-solid fa-laptop-code text-indigo-500"></i>
+
+                <span class="text-xs font-medium text-gray-600">
+                  Frontend Tools
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  FEATURED PROJECTS  -->
+    <section
+      id="projects"
+      class="bg-[#f7f7ff] min-h-screen px-6 py-8 sm:px-8 lg:px-14"
+    >
+      <div class="max-w-6xl mx-auto">
+        <!--  HEADER  -->
+        <div
+          class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+        >
+          <!-- Left -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-800">
+              My Projects
+            </h2>
+          </div>
+
+          <!-- Right -->
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+
+            <p class="text-[10px] font-mono tracking-widest text-gray-500">
+              FRONTEND PROJECTS
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- PIZZA RESTAURANT -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Image -->
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="img/Pizza.png"
+                alt="Pizza Restaurant Website"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-slate-800">
+                Pizza Restaurant
+              </h3>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  HTML
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Tailwind CSS
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Responsive Design
+                </span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex gap-2 mt-4">
+                <a
+                  href="https://2002yadanaraung-nara.github.io/pizza-shop/"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-700 hover:bg-indigo-800 text-white text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  Live Demo
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-[9px]"
+                  ></i>
+                </a>
+
+                <a
+                  href="https://github.com/2002yadanaraung-nara/pizza-shop/tree/main"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 text-gray-600 text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  <i class="fa-solid fa-code text-[9px]"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3Columns card -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Image -->
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="img/3columns-card.png"
+                alt="Pizza Restaurant Website"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-slate-800">
+                # Columns Card
+              </h3>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  HTML
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Tailwind CSS
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Responsive Design
+                </span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex gap-2 mt-4">
+                <a
+                  href="https://2002yadanaraung-nara.github.io/pizza-shop/"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-700 hover:bg-indigo-800 text-white text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  Live Demo
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-[9px]"
+                  ></i>
+                </a>
+
+                <a
+                  href="https://github.com/2002yadanaraung-nara/pizza-shop/tree/main"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 text-gray-600 text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  <i class="fa-solid fa-code text-[9px]"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Preview -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Image -->
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="img/product-preview-card.png"
+                alt="Pizza Restaurant Website"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-slate-800">
+                Product Preview Card
+              </h3>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  HTML
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Tailwind CSS
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Responsive Design
+                </span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex gap-2 mt-4">
+                <a
+                  href="https://2002yadanaraung-nara.github.io/pizza-shop/"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-700 hover:bg-indigo-800 text-white text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  Live Demo
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-[9px]"
+                  ></i>
+                </a>
+
+                <a
+                  href="https://github.com/2002yadanaraung-nara/pizza-shop/tree/main"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 text-gray-600 text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  <i class="fa-solid fa-code text-[9px]"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- result-summary -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Image -->
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="img/result-summary.png"
+                alt="Pizza Restaurant Website"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-slate-800">
+                Result Summary Card
+              </h3>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  HTML
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Tailwind CSS
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Responsive Design
+                </span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex gap-2 mt-4">
+                <a
+                  href="https://2002yadanaraung-nara.github.io/pizza-shop/"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-700 hover:bg-indigo-800 text-white text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  Live Demo
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-[9px]"
+                  ></i>
+                </a>
+
+                <a
+                  href="https://github.com/2002yadanaraung-nara/pizza-shop/tree/main"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 text-gray-600 text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  <i class="fa-solid fa-code text-[9px]"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Proof -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Image -->
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="img/social-proof.png"
+                alt="Pizza Restaurant Website"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-slate-800">
+                Social Proof Review
+              </h3>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  HTML
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Tailwind CSS
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Responsive Design
+                </span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex gap-2 mt-4">
+                <a
+                  href="https://2002yadanaraung-nara.github.io/pizza-shop/"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-700 hover:bg-indigo-800 text-white text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  Live Demo
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-[9px]"
+                  ></i>
+                </a>
+
+                <a
+                  href="https://github.com/2002yadanaraung-nara/pizza-shop/tree/main"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 text-gray-600 text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  <i class="fa-solid fa-code text-[9px]"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Card -->
+          <div
+            class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:-translate-y-1 transition duration-300"
+          >
+            <!-- Image -->
+            <div class="relative h-48 overflow-hidden">
+              <img
+                src="img/stats-card.png"
+                alt="Pizza Restaurant Website"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-4">
+              <h3 class="text-base font-semibold text-slate-800">
+                Stats Preview Card
+              </h3>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  HTML
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Tailwind CSS
+                </span>
+
+                <span
+                  class="bg-indigo-50 text-gray-500 text-[9px] font-mono px-2 py-1 rounded-sm"
+                >
+                  Responsive Design
+                </span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex gap-2 mt-4">
+                <a
+                  href="https://2002yadanaraung-nara.github.io/pizza-shop/"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-700 hover:bg-indigo-800 text-white text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  Live Demo
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-[9px]"
+                  ></i>
+                </a>
+
+                <a
+                  href="https://github.com/2002yadanaraung-nara/pizza-shop/tree/main"
+                  target="_blank"
+                  class="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 text-gray-600 text-[10px] sm:text-xs font-medium px-3 py-1.5 rounded-md transition"
+                >
+                  <i class="fa-solid fa-code text-[9px]"></i>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  GITHUB  -->
+        <div class="text-center mt-12">
+          <p class="text-sm text-gray-500 mb-4">
+            Want to explore more of my projects?
+          </p>
+
+          <a
+            href="https://github.com/2002yadanaraung-nara"
+            class="inline-flex items-center gap-2 border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 text-sm font-medium px-5 py-2.5 rounded-lg transition"
+          >
+            <i class="fa-brands fa-github text-base"></i>
+            View My GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-[#f8f9fb] px-6 py-16 sm:px-8 lg:px-14">
+      <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <span
+            class="inline-flex items-center border border-indigo-200 rounded-full px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-indigo-700"
+          >
+            CONTACT
+          </span>
+
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#202124]">
+            Let's Work Together
+          </h2>
+
+          <p class="mt-4 text-gray-500 max-w-xl mx-auto">
+            Have a project or an opportunity in mind? Feel free to get in touch.
+            I’d be happy to connect and discuss how we can work together.
+          </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-xl p-6 sm:p-8">
+          <h3 class="text-xl font-semibold text-[#202124]">Get In Touch</h3>
+
+          <p class="mt-3 text-sm leading-relaxed text-gray-500">
+            I'm always open to discussing new projects, internship
+            opportunities, collaborations, or simply connecting with other
+            developers and designers.
+          </p>
+
+          <!-- Email -->
+          <div class="mt-6 flex items-center gap-4">
+            <div
+              class="w-11 h-11 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-700"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-400">Email</p>
+              <p
+                class="text-sm font-medium text-gray-700 hover:text-indigo-700 transition"
+              >
+                200yadanaraung@gmail.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="mt-5 flex items-center gap-4">
+            <div
+              class="w-11 h-11 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-700"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-400">Location</p>
+              <p class="text-sm font-medium text-gray-700">Thailand</p>
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/2002yadanaraung-nara"
+            target="_blank"
+            class="mt-5 flex items-center gap-4 group"
+          >
+            <div
+              class="w-11 h-11 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-700"
+            >
+              <i class="fa-brands fa-github"></i>
+            </div>
+
+            <div>
+              <p class="text-xs text-gray-400">GitHub</p>
+              <p
+                class="text-sm font-medium text-gray-700 group-hover:text-indigo-700 transition"
+              >
+                2002yadanaraung-nara
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
 
