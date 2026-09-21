@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --slate-blue-bg: hsl(252, 100%, 67%);
+  --royal-blue-bg: hsl(241, 81%, 54%);
+  --Violet-circle: hsla(256, 72%, 46%, 1);
+  --Persian-circle: hsla(241, 72%, 46%, 0);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  background-color: var(--Pale-blue);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  .card-container {
+    background-color: var(--White);
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .card-left {
+      background: linear-gradient(
+        180deg,
+        var(--slate-blue-bg),
+        var(--royal-blue-bg)
+      );
+      padding: 1rem 2rem;
+      color: var(--Pale-blue);
+      text-align: center;
+      border-radius: 0 0 1rem 1rem;
+      h3 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #faf8f895;
+      }
+      .score {
+        background: linear-gradient(
+          180deg,
+          var(--Violet-circle),
+          var(--Persian-circle)
+        );
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2 {
+          font-weight: 800;
+          font-size: 3rem;
+        }
+        .result {
+          margin-top: 0.2rem;
+          color: #faf8f895;
+        }
+      }
+      h4 {
+        color: var(--White);
+        font-weight: 700;
+      }
+      p {
+        margin-top: 0.5rem;
+        color: #faf8f895;
+        font-size: 17px;
+      }
+    }
+    .card-right {
+      background-color: var(--White);
+      padding: 1rem 2rem;
+      /* h3 {
+      } */
+      .score-value {
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .score-categories {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-radius: 0.3rem;
+          padding: 0.4rem 0.6rem;
+          &:nth-child(1) {
+            background-color: #fff6f7;
+
+            i {
+              color: var(--Light-red);
+            }
+            h5 {
+              color: var(--Light-red);
+              display: inline;
+            }
+          }
+          &:nth-child(2) {
+            background-color: #fffaf4;
+
+            i {
+              color: var(--Orangey-yellow);
+            }
+            h5 {
+              color: var(--Orangey-yellow);
+              display: inline;
+            }
+          }
+          &:nth-child(3) {
+            background-color: #f2fdf9;
+
+            i {
+              color: var(--Green-teal);
+            }
+            h5 {
+              color: var(--Green-teal);
+              display: inline;
+            }
+          }
+          &:nth-child(4) {
+            background-color: #f4f4fe;
+
+            i {
+              color: var(--Cobalt-blue);
+            }
+            h5 {
+              color: var(--Cobalt-blue);
+              display: inline;
+            }
+          }
+          p {
+            span {
+              color: #0000004b;
+            }
+          }
+        }
+      }
+      a {
+        margin-top: 1rem;
+        display: block;
+
+        button {
+          width: 100%;
+          background-color: var(--Dark-gray-blue);
+          padding: 0.5rem 1.6rem;
+          border-radius: 30px;
+          border: none;
+          color: var(--White);
+          &:hover {
+            background: linear-gradient(
+              180deg,
+              var(--slate-blue-bg),
+              var(--royal-blue-bg)
+            );
+          }
+        }
+      }
+    }
+  }
+}
